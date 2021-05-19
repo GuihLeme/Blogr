@@ -1,0 +1,49 @@
+@import '../../../styles/scss/conf';
+
+.container {
+  width: 100%;
+  height: 25rem;
+
+  background: var(--bg-gradient);
+  background-image: url('/bg-pattern-circles.svg'), var(--bg-gradient);
+  background-repeat: no-repeat;
+  background-position: top 50% left 25%;
+
+  border-radius: 0 8rem 0 8rem;
+  margin: 4rem 0;
+
+  .content {
+    @include margin-page;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+
+    position: relative;
+
+    .texts {
+      width: 610px;
+      margin-left: 10rem;
+
+    }
+
+    h2 {
+      color: var(--white);
+    }
+
+    p {
+      color: var(--white);
+      letter-spacing: 0.1rem;
+    }
+
+    img {
+      position: absolute;
+      top: -18%;
+      left: -4%;
+    }
+  }
+
+}

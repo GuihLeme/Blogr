@@ -1,0 +1,213 @@
+@import '../../styles/scss/conf';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  font: 500 1rem 'Ubuntu';
+  color: var(--white);
+
+  a {
+    padding: 1rem;
+  }
+
+  input {
+    display: none;
+    visibility: hidden;
+  }
+
+  .menuIcon {
+    display: none;
+    visibility: hidden;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 3.75rem;
+    width: 100%;
+
+    .navItems {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      position: relative;
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          margin-left: .5rem;
+        }
+
+        .rotateArrow {
+          transform: rotate(180deg);
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .dropMenuClosed {
+        display: none;
+        visibility: hidden;
+
+        position: absolute;
+        top: 3rem;
+      }
+
+      .dropMenuOpen {
+        display: flex;
+        visibility: visible;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        color: var(--very-dark-black-blue);
+        background: var(--white);
+        border-radius: .5rem;
+        box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.25);
+
+        width: 10.5rem;
+        padding: .5rem;
+
+        position: relative;
+
+        a {
+          padding: .5rem;
+
+          &:hover {
+            font-weight: 700;
+          }
+        }
+
+        position: absolute;
+        top: 3rem;
+      }
+    }
+
+    .credentials {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+
+      > a {
+        margin-right: 2rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @media #{$BREAKPOINT-MOBILE} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+    .credentials,
+    nav {
+      display: none;
+      visibility: hidden;
+    }
+
+    .menuIcon {
+      display: flex;
+      visibility: visible;
+
+      cursor: pointer;
+    }
+
+    .input:checked ~ nav {
+      visibility: visible;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      position: absolute;
+      top: 3rem;
+      right: 50%;
+      transform: translateX(50%);
+
+      width: 100%;
+      background: #fff;
+      color: var(--very-dark-black-blue);
+
+      border-radius: .5rem;
+      box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.25);
+
+      padding: 1rem 0;
+
+      .navItems {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        a {
+          svg path {
+            stroke: #FF7B86;
+          }
+        }
+
+
+        .dropMenuOpen {
+          position: static;
+          visibility: visible;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          box-shadow: none;
+          width: calc(100% - 40px);
+          background: var(--grayish-blue);
+          color: var(--very-dark-black-blue)
+        }
+
+        &:last-child {
+          border-bottom: 1px solid olive;
+        }
+      }
+
+      .credentials {
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 90%;
+
+        border-top: 1px solid var(--grayish-blue);
+        margin-top: 1rem;
+
+        a {
+          margin: 0;
+        }
+
+        button {
+          background: var(--bg-gradient-intro);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

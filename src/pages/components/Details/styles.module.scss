@@ -1,0 +1,54 @@
+@import '../../../styles/scss/conf';
+
+.container {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  overflow: hidden;
+
+  padding: 13rem 0;
+
+
+  .content {
+    @include margin-page;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: relative;
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 600px;
+
+
+      div {
+        margin-top: 3rem;
+
+        p {
+          letter-spacing: 0.1rem;
+          line-height: 1.6rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .imgDesktop {
+      position: absolute;
+      top: -40%;
+      left: -40%;
+    }
+
+    .imgMobile {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
