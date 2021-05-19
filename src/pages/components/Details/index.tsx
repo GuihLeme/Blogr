@@ -6,6 +6,8 @@ const Details: React.FC = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
+        <img src="/illustration-laptop-desktop.svg" alt="editor" className={styles.imgDesktop}/>
+        <img src="/illustration-laptop-mobile.svg" alt="editor" className={styles.imgMobile}/>
         <div className={styles.texts}>
           <div>
             <h3>Free, open, simple</h3>
@@ -20,8 +22,6 @@ const Details: React.FC = () => {
             </p>
           </div>
         </div>
-        <img src="/illustration-laptop-desktop.svg" alt="editor" className={styles.imgDesktop}/>
-        <img src="/illustration-laptop-mobile.svg" alt="editor" className={styles.imgMobile}/>
       </div>
     </section>
   )

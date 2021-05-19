@@ -46,4 +46,52 @@
     }
   }
 
+  @media #{$BREAKPOINT-MOBILE} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 2rem 0;
+    margin-top: 10rem;
+
+
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      img {
+        width: 100%;
+        transform: translateY(-55%);
+        margin: 0 auto;
+
+        top: 0;
+        left: 0;
+
+      }
+
+      h2 {
+        margin-bottom: 2rem;
+      }
+
+      .texts {
+        width: auto;
+        margin: 15rem 0 7.5rem 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+      }
+    }
+  }
 }

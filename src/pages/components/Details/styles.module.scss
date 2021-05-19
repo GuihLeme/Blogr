@@ -51,4 +51,40 @@
       visibility: hidden;
     }
   }
+
+  @media #{$BREAKPOINT-MOBILE} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 2rem 0;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      .imgDesktop {
+        display: none;
+        visibility: hidden;
+      }
+
+      .imgMobile {
+        display: flex;
+        visibility: visible;
+      }
+
+      .texts {
+        width: auto;
+      }
+    }
+  }
 }

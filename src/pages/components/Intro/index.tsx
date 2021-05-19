@@ -7,6 +7,8 @@ const Intro: React.FC = () => {
       <section className={styles.container}>
         <h2>Designed for the future</h2>
         <div className={styles.content}>
+          <img src="/illustration-editor-desktop.svg" alt="editor" className={styles.imgDesktop}/>
+          <img src="/illustration-editor-mobile.svg" alt="editor" className={styles.imgMobile}/>
           <div className={styles.texts}>
             <div>
               <h3>Introducing an extensible editor</h3>
@@ -21,8 +23,6 @@ const Intro: React.FC = () => {
               </p>
             </div>
           </div>
-          <img src="/illustration-editor-desktop.svg" alt="editor" className={styles.imgDesktop}/>
-          <img src="/illustration-editor-mobile.svg" alt="editor" className={styles.imgMobile}/>
         </div>
       </section>
   )
